@@ -19,6 +19,7 @@ namespace Lotto.Controllers
             var numbers = _luckyNumberService
                 .DrawNumbers()
                 .Take(6)
+                .OrderBy(n => n)
                 .ToList();
 
 
