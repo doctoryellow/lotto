@@ -19,5 +19,8 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lotto.Core\Lotto.Core.csproj" />
+  </ItemGroup>
 
 </Project>
