@@ -22,9 +22,18 @@ namespace Lotto.Controllers
                 .ToList();
 
 
+            var balls = numbers
+                .Select(n => new BallViewModel
+                {
+                    Number = n,
+                    Class = $"ball{n.ToString("00").Substring(0,1)}"
+                })
+                .ToList();
+
+
             var viewModel = new HomeViewModel()
             {
-                Numbers = numbers
+                Balls = balls
             };
 
             return View(viewModel);

@@ -6,9 +6,9 @@
     <div class="col-md-12">
         <h2>Your lucky numbers!</h2>
         <ul>
-            @foreach(var number in Model.Numbers)
+            @foreach(var ball in Model.Balls)
             {
-                <li>@number</li>
+                <li class="ball @ball.Class">@ball.Number</li>
             }
         </ul>
     </div>

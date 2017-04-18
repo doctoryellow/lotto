@@ -3,6 +3,36 @@
     padding-bottom: 20px;
 }
 
+.ball {
+    border-style: 2px solid black;
+    display: inline-block;
+    width: 50px;
+    height: 50px;left
+}
+
+.ball.ball0 {
+    background-color: lightgrey
+}
+
+.ball.ball1 {
+    background-color: lightblue
+}
+
+.ball.ball2 {
+    background-color: pink
+}
+
+.ball.ball3 {
+    background-color: darkseagreen
+}
+
+.ball.ball4 {
+    background-color: lightyellow
+}
+
+
+
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {

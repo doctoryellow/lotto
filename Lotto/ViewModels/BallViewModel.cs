@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace Lotto.ViewModels
 {
-    public class HomeViewModel
+    public class BallViewModel
     {
-        public IList<BallViewModel> Balls { get; set; }
+        public int Number { get; set; }
+        public string Class { get; set; }
     }
 }

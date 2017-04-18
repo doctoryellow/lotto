@@ -31,8 +31,8 @@ namespace Lotto.Tests
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsAssignableFrom<HomeViewModel>(viewResult.Model);
 
-            Assert.Equal(6, model.Numbers.Count);
-            Assert.Equal(new[] { 1, 2, 3, 4, 5, 6 }, model.Numbers);
+            Assert.Equal(6, model.Balls.Count);
+            Assert.Equal(new[] { 1, 2, 3, 4, 5, 6 }, model.Balls.Select(b => b.Number));
         }
     }
 }
