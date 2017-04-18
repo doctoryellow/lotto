@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Lotto.Core;
 
 namespace Lotto
 {
@@ -29,6 +30,10 @@ namespace Lotto
         {
             // Add framework services.
             services.AddMvc();
+
+            // Configure dependency injection
+            services.AddTransient<IRandomNumberService, SimpleRandomNumberService>();
+            services.AddTransient<ILuckyNumberService, LuckyNumberService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
