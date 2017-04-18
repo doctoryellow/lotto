@@ -4,11 +4,16 @@ using System.Text;
 
 namespace Lotto.Core
 {
+    // TODO: If actually drawing for a real lottery create more rigorous implementation using System.Security.Cryptography.RandomNumberGenerator
     public class SimpleRandomNumberService : IRandomNumberService
     {
-        public int GetRandomInteger(int min, int max)
+        private readonly Random _random;
+
+        public SimpleRandomNumberService()
         {
-            throw new NotImplementedException();
+            _random = new Random();
         }
+
+        public int GetRandomInteger(int min, int max) => _random.Next(min, max);
     }
 }
